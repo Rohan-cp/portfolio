@@ -2,6 +2,14 @@
   background-color: #000000;
 }
 
+body {
+  background-color: #000000;
+}
+
+* {
+  transition: all .2s linear;
+}
+
 .hero {
   width: 100%;
 }
@@ -47,26 +55,6 @@ nav ul li a:hover {
   color: black;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 .table-header {
   color: white;
   display: flex;
@@ -91,4 +79,44 @@ nav ul li a:hover {
 
 .right-col {
   width: 500px;
+}
+
+.wrapper {
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  color: white;
+}
+
+.wrapper .box {
+  color: white;
+  cursor: pointer;
+}
+
+.wrapper .box:hover {
+  color: white;
+  position: relative;
+  z-index: 2;
+  text-shadow: 0 10px 5px rgba(0, 0, 0, 0.9);
+}
+
+.effect {
+  position: absolute;
+  pointer-events: none;
+  z-index: 1;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%) scale(.2);
+}
+
+.wrapper .box:hover ~ .effect {
+  transform: translate(-50%, 9%) scale(1);
+  opacity: 1;
 }
