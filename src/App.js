@@ -20,7 +20,38 @@ function App() {
         </ul>
       </nav>
       <div className="content-container">
-        <p style={{ color: "white", fontSize: 22 }}>My portfoliooo</p>
+        <li className="table-header">
+          <div className="left-col">
+            date
+          </div>
+          <div className="right-col">
+            name
+          </div>
+        </li>
+        <li className="piece-details">
+          <div className="left-col">
+            13/03/23
+          </div>
+          <div className="right-col">
+            {"pulsar (inspired by neon genesis opening)"}
+          </div>
+        </li>
+        <li className="piece-details">
+          <div className="left-col">
+            07/11/22
+          </div>
+          <div className="right-col">
+            noisy grid
+          </div>
+        </li>
+        <li className="piece-details">
+          <div className="left-col">
+            03/11/20
+          </div>
+          <div className="right-col">
+            light funnel
+          </div>
+        </li>
       </div>
     </div>
   );
